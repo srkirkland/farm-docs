@@ -5,31 +5,6 @@ copyright: Copyright &copy; 2023 The Regents of the University of California, Da
 
 nav:
   - About: index.md
-  - Users:
-    - General:
-      - general/index.md
-      - Accessing the Cluster: general/access.md
-      - User Environment: general/environment.md
-      - Available Resources: general/resources.md
-      - Data Storage: general/storage.md
-    - Scheduler:
-      - scheduler/index.md
-      - Slurm Commands: scheduler/jobs.md
-      - Queueing: scheduler/queues.md
-      - Resources: scheduler/resources.md
-      - Job Scripts: scheduler/jobscripts.md
-    - Software:
-      - software/index.md
-      - Software List: software/list.md
-      - Module System: software/modules.md
-      - Python and Conda: software/conda.md
-      - R and RStudio: software/rlang.md
-      - cryo-EM: software/cryoem.md
-      - Developing Software: software/developing.md
-  - Admins:
-    - Storage: admin_storage.md
-    - Networking: admin_networking.md
-    - Scheduler: admin_scheduler.md
 
 markdown_extensions:
   - toc:
@@ -56,15 +31,12 @@ plugins:
   - search
   - git-revision-date-localized:
       enable_creation_date: true
-  - macros:
-        module_name: macros
 
 extra:
-  spack_modulefiles_path: ../spack-ucdavis/modulefiles/hpccf/franklin/
   social:
     - icon: material/email-edit
-      link: "mailto:hpc-help@ucdavis.edu"
-      name: Email HPCCF Support
+      link: "mailto:farm-hpc@ucdavis.edu"
+      name: Email Farm Support
     - icon: fontawesome/brands/slack
       link: https://ucdavis.slack.com/archives/C053NKA88
       name: "#hpc Channel on ucdavis.slack.com"

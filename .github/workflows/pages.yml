@@ -2,7 +2,6 @@ name: ci
 on:
   push:
     branches:
-      - master 
       - main
 permissions:
   contents: write
@@ -14,11 +13,6 @@ jobs:
         uses: actions/checkout@v3
         with:
           path: docs
-      - name: Checkout spack-ucdavis
-        uses: actions/checkout@v3
-        with:
-          repository: ucdavis/spack-ucdavis
-          path: spack-ucdavis
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
@@ -26,7 +20,7 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
-      - run: pip install mkdocs-material mkdocs-git-revision-date-localized-plugin mkdocs-macros-plugin
+      - run: pip install -r requirements.txt
       - name: mkdocs deploy
         working-directory: docs
         run: mkdocs gh-deploy --force
